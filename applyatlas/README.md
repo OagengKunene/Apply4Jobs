@@ -6,6 +6,10 @@ ApplyAtlas discovers roles, explains fit, selects verified experience, prepares 
 
 Built with **LangGraph + FastAPI + Playwright + SQLite**. Runs locally. Includes a complete fictional employer sandbox that works without an LLM key.
 
+![ApplyAtlas operator workspace, captured during the passing browser integration test](docs/workspace.png)
+
+**Verified:** [42 tests passed in GitHub Actions](https://github.com/OagengKunene/Githubtest/actions/runs/41702022893), including actual Chromium sandbox submission and the desktop-to-mobile dashboard flow.
+
 ## What problem it solves
 
 Job seekers repeat the same search, screening, tailoring, form filling, and tracking work for every role. Career advisers repeat that work for multiple clients. ApplyAtlas turns it into a persistent, inspectable workflow while keeping each client's factual experience and application rules together.
