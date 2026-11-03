@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c4135"><title>ApplyAtlas — Your next move, handled.</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="login" class="login-wrap">
+    <div class="login-card"><div class="brand"><span class="brand-mark">a.</span>ApplyAtlas</div>
+      <span class="eyebrow">THE APPLICATION WORKSPACE</span><h1>Your next move,<br><em>handled.</em></h1>
+      <p>A clear path from the right opportunity to an application you can stand behind.</p>
+      <form id="login-form"><label>Owner access token<input id="token" type="password" autocomplete="off" required placeholder="Paste your local workspace token"></label>
+      <button class="primary" type="submit">Open workspace <span>↗</span></button></form>
+      <p class="hint">First run? In your terminal, run <code>applyatlas token</code>. Your token stays in this tab’s memory.</p>
+    </div><div class="login-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-star">✳</span><div class="art-label">LESS BUSYWORK.<br>MORE POSSIBILITY.</div></div>
+  </div>
+  <div id="workspace" class="app-shell hidden">
+    <aside class="sidebar">
+      <a class="brand" href="/"><span class="brand-mark">a.</span>ApplyAtlas</a>
+      <div class="workspace-label">YOUR WORKSPACE</div>
+      <nav aria-label="Main navigation">
+        <button data-view="overview" class="nav-item active"><span>◫</span>Overview</button>
+        <button data-view="applications" class="nav-item"><span>▤</span>Applications <b id="nav-count">0</b></button>
+        <button data-view="clients" class="nav-item"><span>◎</span>Client profiles</button>
+        <button data-view="policy" class="nav-item"><span>⌘</span>Autopilot rules</button>
+        <button data-view="audit" class="nav-item"><span>≋</span>Agent journal</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="agent-status"><span class="dot"></span>Local workspace</div>
+        <p>Your experience.<br>Your voice. Your rules.</p><button id="logout" class="text-button">Lock workspace ↗</button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div><span class="breadcrumb">Workspace</span><span class="slash">/</span><span id="view-name">Overview</span></div>
+        <div class="topbar-right"><span id="mode-pill" class="pill">REVIEW MODE</span><select id="candidate-select" aria-label="Active client"><option>No client selected</option></select><div class="avatar" id="avatar">A</div></div></header>
+      <section class="page-content">
+        <div class="page-heading"><div><div class="eyebrow" id="greeting">A LITTLE LESS SEARCHING. A LOT MORE PROGRESS.</div>
+          <h1 id="page-title">Your next move, <em>handled.</em></h1><p id="page-subtitle">Find the fit. Tell your story. Let your agent take it from there.</p></div>
+          <div class="header-actions"><button id="demo" class="secondary">Load demo</button><button id="discover" class="primary">＋ Discover roles</button></div></div>
+        <div id="demo-note" class="demo-note hidden">SANDBOX WORKSPACE <span>Fictional client and employers. Demo submissions stay on this computer.</span></div>
+        <div id="view-content"></div>
+        <footer>ApplyAtlas <span>Thoughtful applications, by design.</span><span class="footer-right">v0.1 · Local first</span></footer>
+      </section>
+    </main>
+  </div>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+</body></html>

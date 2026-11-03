@@ -1,0 +1,9 @@
+services:
+  applyatlas:
+    build: .
+    network_mode: host
+    volumes:
+      - ./data:/app/data
+    environment:
+      APPLYATLAS_LIVE_SUBMIT: "false"
+    restart: unless-stopped
